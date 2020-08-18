@@ -11,5 +11,5 @@ public class ProxyZuulApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(ProxyZuulApplication.class, args);
 	}
-
+	
 }
