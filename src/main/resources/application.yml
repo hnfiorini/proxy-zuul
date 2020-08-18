@@ -1,0 +1,24 @@
+zuul:
+  routes:
+    proxy:
+      path: /**
+      url: https://api.mercadolibre.com/
+  ratelimit:
+    enabled: true
+    repository: redis
+    policy-list:
+      proxy:
+        - limit: 5
+          refresh-interval: 60
+          type:
+            - origin
+        - limit: 5
+          refresh-interval: 60
+          type:
+            - url
+        - limit: 5
+          refresh-interval: 60
+          type:
+            - origin
+            - url
+               
